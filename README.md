@@ -5,7 +5,7 @@
 This app provides real time parking lot availability information to its user.
 
 
-[<img src="[markdownmonstericon.png](https://cdn.discordapp.com/attachments/1051440791731576892/1051440831611015208/image.png)" />](https://cdn.discordapp.com/attachments/1051440791731576892/1051440831611015208/image.png)
+![Alt text](https://cdn.discordapp.com/attachments/1051440791731576892/1051440831611015208/image.png "image demo")
 
 
 <h2>Prerequisite: </h2>
