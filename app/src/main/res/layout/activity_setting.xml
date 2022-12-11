@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SettingsActivity">
+
+
+    <RadioGroup
+        android:id="@+id/theme_rg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:checkedButton="@+id/dark_blue_and_white_rb"
+        app:layout_constraintBottom_toTopOf="@+id/carparks_report_rv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/carpark_input_et">
+
+        <RadioButton
+            android:id="@+id/dark_blue_and_white_rb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/dark_blue_and_white_rb" />
+
+        <RadioButton
+            android:id="@+id/black_and_white_rb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/black_and_white_rb" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/apply_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/apply_btn"
+        android:layout_gravity="center"
+        android:textSize="30sp"
+        />
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

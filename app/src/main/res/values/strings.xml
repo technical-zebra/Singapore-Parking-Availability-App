@@ -12,4 +12,9 @@
     <string name="map_hint">View\n on Map</string>
     <string name="num_of_lots">415</string>
     <string name="todo">A map icon</string>
+    <string name="setting_btn">Setting</string>
+    <string name="apply_btn">Apply</string>
+    <string name="dark_blue_and_white_rb">Dark Blue and White</string>
+    <string name="black_and_white">Black and White</string>
+
 </resources>

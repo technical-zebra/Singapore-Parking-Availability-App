@@ -1,10 +1,12 @@
 package edu.jcu.kezhang.parkingavailability;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.widget.Button;
@@ -34,13 +36,14 @@ import java.util.Map;
 public class MainActivity extends AppCompatActivity {
 
     // Declared Instance Variables.
-    Button displayCarparks, searchCarpark;
+    Button displayCarparks, searchCarpark, setting;
     EditText carparkInput;
     RecyclerView recyclerView;
     RadioButton lta, hdb, ura;
     CarparkDatabaseHelper databaseHelper = new CarparkDatabaseHelper(MainActivity.this);
     String selectedAgency = "";
     String search = "";
+    String selectedTheme = "dark_blue_and_white";
     private RequestQueue queue;
 
     /** Check the state of network connectivity.
@@ -103,6 +106,7 @@ public class MainActivity extends AppCompatActivity {
 
         displayCarparks = findViewById(R.id.display_carparks_btn);
         searchCarpark = findViewById(R.id.search_carpark_btn);
+        setting = findViewById(R.id.setting_btn);
 
         carparkInput = findViewById(R.id.carpark_input_et);
         recyclerView = findViewById(R.id.carparks_report_rv);
@@ -191,6 +195,14 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
+        /* Button Listener for setting button. */
+        setting.setOnClickListener(view -> {
+
+            Intent intent = new Intent(this, SettingsActivity.class);
+            startActivity(intent);
+
+        });
+
         /* Restore view after screen rotation. */
         if(savedInstanceState == null){
             ; // Do nothing.
@@ -229,5 +241,18 @@ public class MainActivity extends AppCompatActivity {
         selectedAgency = getRadioButton();
         outState.putString("selectedAgency", selectedAgency);
         super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data){
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == SettingsActivity.SETTINGS_REQUEST){
+            if (resultCode == RESULT_OK) {
+                if(data != null){
+                    selectedTheme = data.getStringExtra("selectedTheme");
+                }
+            }
+        }
     }
 }
