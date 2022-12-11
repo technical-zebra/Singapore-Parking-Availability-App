@@ -14,11 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:orientation="horizontal"
-        android:checkedButton="@+id/dark_blue_and_white_rb"
-        app:layout_constraintBottom_toTopOf="@+id/carparks_report_rv"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/carpark_input_et">
+        android:checkedButton="@+id/dark_blue_and_white_rb" >
 
         <RadioButton
             android:id="@+id/dark_blue_and_white_rb"

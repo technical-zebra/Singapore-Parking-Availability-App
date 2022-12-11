@@ -32,17 +32,17 @@
 
     <EditText
         android:id="@+id/carpark_input_et"
-        android:layout_width="250dp"
+        android:layout_width="225dp"
         android:layout_height="48dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="5dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="5dp"
         android:ems="10"
         android:hint="@string/carpark_input_et"
         android:importantForAutofill="no"
         android:inputType="textPersonName"
         android:textColorHint="#757575"
-        app:layout_constraintEnd_toStartOf="@+id/search_carpark_btn"
+        app:layout_constraintEnd_toStartOf="@+id/setting_btn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/display_carparks_btn" />
 
@@ -50,12 +50,13 @@
         android:id="@+id/setting_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="20dp"
         android:text="@string/setting_btn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/display_carparks_btn"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/carpark_input_et"
+        app:layout_constraintTop_toBottomOf="@+id/display_carparks_btn" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/carparks_report_rv"
