@@ -2,9 +2,7 @@ package edu.jcu.kezhang.parkingavailability;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.RadioButton;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,6 +22,10 @@ public class SettingsActivity extends AppCompatActivity {
     RadioButton black_and_white, dark_blue_and_white;
     Button apply;
 
+    /** Initialise this activity, create the the default UI and their interactive functions,
+     *  also restore view after screen rotation.
+     * @param savedInstanceState A bundle able to read information in key-value pair.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

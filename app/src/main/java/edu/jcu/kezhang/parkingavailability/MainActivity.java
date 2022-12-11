@@ -243,13 +243,21 @@ public class MainActivity extends AppCompatActivity {
         super.onSaveInstanceState(outState);
     }
 
+    /** Getting a result from another activity.
+     * @param requestCode Identify from which Intent you came back.
+     * @param resultCode Status to indicate the success of the operation..
+     * @param data A Intent store the selected theme string as a key value pair.
+     */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data){
         super.onActivityResult(requestCode, resultCode, data);
 
+        // Check request code.
         if (requestCode == SettingsActivity.SETTINGS_REQUEST){
+            // Check result code.
             if (resultCode == RESULT_OK) {
                 if(data != null){
+                    // Recerive selected theme string.
                     selectedTheme = data.getStringExtra("selectedTheme");
                 }
             }
