@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Parking Availability</string>
+    <string name="carpark_input_et">Enter carpark name or id</string>
+    <string name="display_carparks_button">Display all carparks</string>
+    <string name="search_carpark_btn">Search</string>
+    <string name="lta_rb">LTA</string>
+    <string name="hdb_rb">HDB</string>
+    <string name="ura_rb">URA</string>
+    <string name="development">Suntec City</string>
+    <string name="area">Area: Marina</string>
+    <string name="carpark_id">ID: 1</string>
+    <string name="map_hint">View\n on Map</string>
+    <string name="num_of_lots">415</string>
+    <string name="todo">A map icon</string>
+</resources>
